@@ -8,7 +8,7 @@ body {
     overflow: hidden;
     color:var(--text);
     background-color: var(--background);
-    font-family: courierPrime;
+    font-family: pressStart;
 
     @include flex(row,center,center);
 
