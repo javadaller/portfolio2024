@@ -1,0 +1,36 @@
+@use "../extends/_extends_dir";
+
+main {
+    z-index: 10;
+    padding:10px 20px 0 20px;
+    @include box(80%);
+    @include responsive(1000px) {
+        @include box(85%);
+    }
+    @include responsive(1450px) {
+        width: 90%;
+    }
+
+    background-color: var(--screen);
+    border-radius:2% / 90%;
+    box-shadow: 0 0 5px 10px var(--monitor_shadow);
+    text-shadow: 0 0 10px var(--text_shadow);
+
+    #main_header {
+        @include flex(row,flex-end,center);
+        h3 {
+            font-family: pressStart;
+            font-size: 0.9rem;
+        }
+    }
+
+}
+
+#screen_texture {
+    z-index: 20;
+    @include box(100%);
+    position: absolute;
+    top:0;
+    left:0;
+    filter: opacity(8%) grayscale(100%) contrast(75%);
+}
