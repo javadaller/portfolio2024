@@ -20,7 +20,15 @@ main {
         @include flex(row,flex-end,center);
         h3 {
             font-family: pressStart;
-            font-size: 0.9rem;
+            font-size: 0.7rem;
+            opacity:0.5;
+        }
+    }
+
+    #main_body {
+        h1 {
+            font-family: pressStart;
+            font-size: 1rem;
         }
     }
 
