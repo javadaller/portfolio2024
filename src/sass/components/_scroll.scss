@@ -1,10 +1,6 @@
-#main_body::-webkit-scrollbar {
-    width: 0px;
+main::-webkit-scrollbar {
+    width: 5px;
 }
-#main_body::-webkit-scrollbar-track {
-    background: black;
-}
-#main_body::-webkit-scrollbar-thumb {
-    background-color: white;
-    border-radius: 20px;
+main::-webkit-scrollbar-thumb {
+    background-color: var(--scroll);
 }

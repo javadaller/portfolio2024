@@ -1,0 +1,17 @@
+#fx_scanline {
+    z-index: 150;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    right: 0;
+    height: 1%;
+    opacity: 0.1;
+    background: var(--scanline);
+    filter: blur(7px);
+}
+.scanline {
+    animation: scanline 1.25s linear;
+}
+.scanlineReverse {
+    animation: scanlineReverse 1.25s linear;
+}

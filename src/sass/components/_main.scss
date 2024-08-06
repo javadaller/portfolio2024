@@ -1,7 +1,9 @@
 @use "../extends/_extends_dir";
 
 main {
-    z-index: 10;
+    overflow-x: hidden;
+    z-index: 100;
+    position:relative;
     padding:10px 20px 0 20px;
     @include box(80%);
     @include responsive(1000px) {
@@ -26,23 +28,40 @@ main {
     }
 
     #main_body {
-        overflow-y: scroll;
         h1 {
             font-family: pressStart;
-            font-size: 1.3rem;
+            font-size: 1.4rem;
         }
 
         h2 {
             font-size: 1rem;
+            margin-top: 30px;
         }
 
-        h2, .article, .article > p {
+        .article, .article > p {
             margin-top: 10px;
         }
 
         p {
-            font-size: 0.8rem;
+            font-size: 0.55rem;
         }
+
+        a {
+            color:var(--text);
+            font-size: 0.6rem;
+        }
+        
+        ul {
+            margin-top:10px;
+            list-style-type: none;
+        
+        }
+
+        li::before {
+            content:"¬";
+        }
+
+    
     }
 
 }

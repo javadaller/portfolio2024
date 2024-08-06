@@ -1,3 +1,49 @@
+@keyframes scanline {
+    0% {
+      top: 5%;
+    }
+  
+    100% {
+      top: 95%;
+    }
+}
+
+@keyframes scanlineReverse {
+    0% {
+      top: 95%;
+    }
+  
+    100% {
+      top: 5%;
+    }
+}
+
+.skew {
+    animation: skew 4s linear;
+}
+
+@keyframes skew {
+    0% {
+      transform: skewX(0.25deg);
+    }
+  
+    8% {
+      transform: skewX(0.5deg) scale(1.0001);
+    }
+  
+    15% {
+      transform: skewX(0.3deg) skewY(-0.05deg);
+    }
+  
+    30% {
+      transform: skewX(0.3deg);
+    }
+  
+    100% {
+      transform: skewX(0.05deg);
+    }
+}
+
 .fadeOut {
     animation: fadeOut 0.2s linear forwards;
     opacity:1;

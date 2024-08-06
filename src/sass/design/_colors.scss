@@ -1,6 +1,6 @@
 :root {
     --background:black;
-    --text:rgb(255, 182, 72);
+    --text:#ffb648;
     --text_shadow:rgba(255, 182, 72, 0.425);
     
     --lightGrey:rgb(218, 218, 218);
@@ -8,4 +8,7 @@
     --monitor:rgb(157, 156, 156);
     --screen:rgb(26, 26, 26);
     --monitor_shadow:rgba(36, 35, 35, 0.7);
+
+    --scroll:rgba(255, 182, 72, 0.418);
+    --scanline:rgb(255, 182, 72);
 }

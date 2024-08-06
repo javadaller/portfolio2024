@@ -3,7 +3,7 @@
     position: absolute;
     bottom: 15px;
     right:25px;
-    @include box(60px,50px);
+    @include box(40px,30px);
     @include flex(column,space-between,center);
 
     #on-off_button {

@@ -1,0 +1,16 @@
+#techlist {
+    @include flex(row,space-between,center);
+    flex-wrap: wrap;
+    gap:20px;
+
+    margin-top: 20px;
+    .tech {
+        @include flex(column,center,center);
+
+        .techSVG {
+            margin-bottom: 5px;
+            height:50px;
+            filter: invert(71%) sepia(31%) saturate(959%) hue-rotate(343deg) brightness(106%) contrast(101%);
+        }
+    }
+}
