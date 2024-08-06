@@ -8,6 +8,6 @@ export async function letItSnow() {
             deg = 0;
         }
         background_texture.style.transform = 'rotate(' + deg + 'deg)';
-        await sleep(100);
+        await sleep(75);
     }
 }

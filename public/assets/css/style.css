@@ -780,6 +780,12 @@ main #main_body h2 {
 main #main_body .article, main #main_body .article > p {
   margin-top: 10px;
 }
+main #main_body article .learnMore .learnMoreContent p {
+  margin-top: 10px;
+}
+main #main_body article .learnMoreLink {
+  margin-top: 10px;
+}
 main #main_body p {
   font-size: 0.55rem;
 }
@@ -793,6 +799,25 @@ main #main_body ul {
 }
 main #main_body li::before {
   content: "¬";
+}
+main #main_body #body_footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+main #main_body #body_footer article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main #main_body #body_footer #svgGithub, main #main_body #body_footer #svgLinkedin {
+  cursor: pointer;
+  margin-bottom: 5px;
+  height: 50px;
+  filter: invert(71%) sepia(31%) saturate(959%) hue-rotate(343deg) brightness(106%) contrast(101%) drop-shadow(0 0 10px var(--text_shadow));
 }
 
 #screen_texture {
@@ -850,11 +875,11 @@ main::-webkit-scrollbar-thumb {
 
 #fx_snow {
   z-index: 110;
-  width: 2000px;
-  height: 2000px;
+  width: 2500px;
+  height: 2500px;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -100px;
+  left: -100px;
   background: url("/assets/images/textures/noise.png");
   background-repeat: repeat;
   background-size: 30%;
@@ -867,7 +892,7 @@ main::-webkit-scrollbar-thumb {
 #fx_scanline {
   z-index: 150;
   position: absolute;
-  top: 5%;
+  top: -5%;
   left: 5%;
   right: 0;
   height: 1%;
@@ -911,7 +936,7 @@ main::-webkit-scrollbar-thumb {
 #techlist .tech .techSVG {
   margin-bottom: 5px;
   height: 50px;
-  filter: invert(71%) sepia(31%) saturate(959%) hue-rotate(343deg) brightness(106%) contrast(101%);
+  filter: invert(71%) sepia(31%) saturate(959%) hue-rotate(343deg) brightness(106%) contrast(101%) drop-shadow(0 0 10px var(--text_shadow));
 }
 
 body {

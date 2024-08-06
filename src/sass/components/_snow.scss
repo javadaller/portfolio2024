@@ -1,9 +1,9 @@
 #fx_snow {
     z-index: 110;
-    @include box(2000px);
+    @include box(2500px);
     position: absolute;
-    top:0;
-    left:0;
+    top:-100px;
+    left:-100px;
     background: url("/assets/images/textures/noise.png");
     background-repeat: repeat;
     background-size: 30%;

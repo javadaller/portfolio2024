@@ -8,3 +8,10 @@ letItSnow();
 background_lines();
 skew_fx();
 learnMore();
+//footer:
+document.querySelector('#svgGithub').addEventListener('click', () => {
+    open('https://github.com/javadaller', '_blank');
+});
+document.querySelector('#svgLinkedin').addEventListener('click', () => {
+    open('https://www.linkedin.com/in/arnaud-van-acker', '_blank');
+});

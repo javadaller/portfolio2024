@@ -10,7 +10,7 @@
         .techSVG {
             margin-bottom: 5px;
             height:50px;
-            filter: invert(71%) sepia(31%) saturate(959%) hue-rotate(343deg) brightness(106%) contrast(101%);
+            filter: invert(71%) sepia(31%) saturate(959%) hue-rotate(343deg) brightness(106%) contrast(101%) drop-shadow(0 0 10px var(--text_shadow));
         }
     }
 }
