@@ -43,13 +43,6 @@ main {
         }
 
         article {
-            .learnMore {
-                .learnMoreContent {
-                    p {
-                        margin-top: 10px;
-                    }
-                }
-            }
 
             .learnMoreLink {
                 margin-top: 10px;
@@ -84,11 +77,14 @@ main {
                 @include flex(column,center,center);
             }
             
-            #svgGithub, #svgLinkedin {
+            .svgSocial {
                 cursor:pointer;
                 margin-bottom: 5px;
                 height:50px;
                 filter: invert(71%) sepia(31%) saturate(959%) hue-rotate(343deg) brightness(106%) contrast(101%) drop-shadow(0 0 10px var(--text_shadow));
+            }
+            .svgSocial:hover {
+                transform:scale(110%);
             }
         }
     
@@ -103,4 +99,10 @@ main {
     top:0;
     left:0;
     filter: opacity(8%) grayscale(100%) contrast(75%);
+}
+
+.marginTop {
+    p {
+        margin-top: 15px;
+    }
 }

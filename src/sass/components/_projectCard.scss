@@ -1,0 +1,44 @@
+.project {
+    @include flex(column,center,center);
+
+    #projectCards {
+        @include flex(row,center,flex-start);
+        flex-wrap: wrap;
+
+        .projectCard {
+            @include box(275px, auto);
+            border:solid 1px var(--text);
+            box-shadow: 0 0 10px var(--text_shadow);
+            margin: 20px;
+            padding: 15px;
+        
+            .projectInfo {
+                .projectName {
+                    font-size: 0.7rem;
+                    margin-bottom: 15px;
+                }
+        
+                .projectDescription {
+                    margin-bottom: 15px;
+                }
+            }
+        
+            .projectScreenshotFilter {
+                background-color: var(--text);
+                @include box(100%);
+
+                .projectScreenshot {
+                    @include box(100%);
+                    mix-blend-mode: multiply ; //hard-light? exclusion? multiply ok
+                    background-color: var(--background);
+                    cursor:pointer;
+                    filter: grayscale(100%) contrast(80%);
+                    transition:0.3s;
+                }
+                .projectScreenshot:hover {
+                    filter: grayscale(100%) contrast(80%) invert(100%);
+                }
+            }
+        }
+    }
+}

@@ -10,6 +10,16 @@ background_lines()
 skew_fx()
 learnMore()
 
+//projects:
+const projects: Array<HTMLElement> = Array.from(document.querySelectorAll('.projectScreenshot'))
+
+projects.forEach(project => {
+    project.addEventListener('click', () => {
+        const link: string = project.getAttribute('link')
+        open(link,'_blank')
+    })
+});
+
 //footer:
 document.querySelector('#svgGithub').addEventListener('click', () => {
     open('https://github.com/javadaller','_blank')
