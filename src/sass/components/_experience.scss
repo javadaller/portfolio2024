@@ -1,0 +1,13 @@
+.experience {
+    max-width: 500px;
+    margin-top: 15px;
+    div {
+        @include flex(row,space-between,center);
+        h3 {
+            font-size: 0.8rem;
+        }
+        p {
+            font-size: 1.4rem;
+        }
+    }
+}

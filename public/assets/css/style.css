@@ -1,4 +1,3 @@
-@charset "UTF-8";
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -736,6 +735,7 @@ html[data-theme="dark"] {
 }
 
 main {
+  height: auto;
   overflow-x: hidden;
   z-index: 100;
   position: relative;
@@ -771,11 +771,21 @@ main #main_header h3 {
 }
 main #main_body h1 {
   font-family: pressStart;
-  font-size: 1.4rem;
+  font-size: 4.5vw;
+}
+@media only screen and (min-width: 700px) {
+  main #main_body h1 {
+    font-size: 4vw;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  main #main_body h1 {
+    font-size: 3vw;
+  }
 }
 main #main_body h2 {
   font-size: 1rem;
-  margin-top: 30px;
+  margin-top: 60px;
 }
 main #main_body .article, main #main_body .article > p {
   margin-top: 10px;
@@ -784,18 +794,11 @@ main #main_body article .learnMoreLink {
   margin-top: 10px;
 }
 main #main_body p {
-  font-size: 0.55rem;
+  font-size: 0.6rem;
 }
 main #main_body a {
   color: var(--text);
   font-size: 0.6rem;
-}
-main #main_body ul {
-  margin-top: 10px;
-  list-style-type: none;
-}
-main #main_body li::before {
-  content: "¬";
 }
 main #main_body #body_footer {
   display: flex;
@@ -803,6 +806,7 @@ main #main_body #body_footer {
   justify-content: space-evenly;
   align-items: flex-start;
   flex-wrap: wrap;
+  margin-bottom: 40px;
 }
 main #main_body #body_footer article {
   display: flex;
@@ -834,8 +838,22 @@ main #main_body #body_footer .svgSocial:hover {
   margin-top: 15px;
 }
 
+.marginTop50 {
+  margin-top: 50px;
+}
+
+.flexRow {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
 main::-webkit-scrollbar {
-  width: 5px;
+  width: 0px;
 }
 
 main::-webkit-scrollbar-thumb {
@@ -879,8 +897,8 @@ main::-webkit-scrollbar-thumb {
 
 #fx_snow {
   z-index: 110;
-  width: 2500px;
-  height: 2500px;
+  width: 3500px;
+  height: 3500px;
   position: absolute;
   top: -100px;
   left: -100px;
@@ -888,8 +906,7 @@ main::-webkit-scrollbar-thumb {
   background-repeat: repeat;
   background-size: 30%;
   background-position: center;
-  opacity: 0.15;
-  overflow: hidden;
+  opacity: 0.1;
   pointer-events: none;
 }
 
@@ -897,7 +914,7 @@ main::-webkit-scrollbar-thumb {
   z-index: 150;
   position: absolute;
   top: -5%;
-  left: 5%;
+  left: -5%;
   right: 0;
   height: 1%;
   opacity: 0.1;
@@ -922,7 +939,18 @@ main::-webkit-scrollbar-thumb {
   display: none;
 }
 
-#techlist {
+.techlist {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.techlist h2 {
+  margin-bottom: 25px;
+}
+.techlist #techlist {
+  width: 80%;
+  margin: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -931,13 +959,13 @@ main::-webkit-scrollbar-thumb {
   gap: 20px;
   margin-top: 20px;
 }
-#techlist .tech {
+.techlist #techlist .tech {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-#techlist .tech .techSVG {
+.techlist #techlist .tech .techSVG {
   margin-bottom: 5px;
   height: 50px;
   filter: invert(71%) sepia(31%) saturate(959%) hue-rotate(343deg) brightness(106%) contrast(101%) drop-shadow(0 0 10px var(--text_shadow));
@@ -994,6 +1022,23 @@ main::-webkit-scrollbar-thumb {
 }
 .formation h3 {
   font-size: 0.7rem;
+}
+
+.experience {
+  max-width: 500px;
+  margin-top: 15px;
+}
+.experience div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.experience div h3 {
+  font-size: 0.8rem;
+}
+.experience div p {
+  font-size: 1.4rem;
 }
 
 body {

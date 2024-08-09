@@ -1,6 +1,7 @@
 @use "../extends/_extends_dir";
 
 main {
+    height:auto;
     overflow-x: hidden;
     z-index: 100;
     position:relative;
@@ -30,12 +31,20 @@ main {
     #main_body {
         h1 {
             font-family: pressStart;
-            font-size: 1.4rem;
+            font-size: 4.5vw;
+
+            @include responsive(700px) {
+                font-size: 4vw;
+            }
+
+            @include responsive(1000px) {
+                font-size: 3vw;
+            }
         }
 
         h2 {
             font-size: 1rem;
-            margin-top: 30px;
+            margin-top: 60px;
         }
 
         .article, .article > p {
@@ -51,27 +60,18 @@ main {
 
 
         p {
-            font-size: 0.55rem;
+            font-size: 0.6rem;
         }
 
         a {
             color:var(--text);
             font-size: 0.6rem;
         }
-        
-        ul {
-            margin-top:10px;
-            list-style-type: none;
-        
-        }
-
-        li::before {
-            content:"¬";
-        }
 
         #body_footer {
             @include flex(row,space-evenly,flex-start);
             flex-wrap: wrap;
+            margin-bottom: 40px;
             article {
 
                 @include flex(column,center,center);
@@ -105,4 +105,15 @@ main {
     p {
         margin-top: 15px;
     }
+}
+
+.marginTop50 {
+    margin-top: 50px;
+}
+
+.flexRow {
+    width:100%;
+    @include flex(row,space-around,flex-start);
+    flex-wrap: wrap;
+    gap:20px;
 }
